@@ -1,0 +1,183 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --textarea-bg: #333;
+    --textarea-color: #fff;
+    --button-bg: #e81123;
+    --button-bg-hover: #ad0b19;
+    --description-color: #888;
+    --warn-bg: #750303;
+    --separator-color: #555;
+}
+
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f3f3f3;
+    --textarea-bg: #e0e0e0;
+    --textarea-color: #000;
+    --button-bg: #0078d4;
+    --button-bg-hover: #005a9e;
+    --description-color: #555;
+    --warn-bg: #ffe0e0;
+    --separator-color: #ccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: auto;
+    transition: background-color 0.3s ease;
+}
+
+@media (orientation: portrait) {
+    .card_warn {
+        width: 280px;
+    }
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+.title_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: filter 0.3s ease;
+}
+.theme-toggle:hover {
+    background: none;
+    filter: brightness(0.8);
+}
+
+.github-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: filter 0.3s ease;
+}
+.github-btn:hover {
+    background: none;
+    filter: brightness(0.8);
+}
+
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--textarea-bg);
+    color: var(--textarea-color);
+    resize: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-bg-hover);
+}
+
+.convert_btn {
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.description {
+    margin: 0;
+    font-size: 14px;
+    color: var(--description-color);
+}
+
+.card_warn {
+    background-color: var(--warn-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transform-origin: center center;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+    visibility: collapse;
+    position: absolute;
+}
+
+.card_warn.show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    position: relative;
+}
+
+.title_warn {
+    margin: 0;
+    font-size: 24px;
+    color: --var(--text-color);
+    overflow: hidden;
+}
+
+.description_warn {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-wrap: wrap;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.separator {
+    margin: 10px 0;
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.right-align {
+    width: 100%;
+    text-align: right;
+}

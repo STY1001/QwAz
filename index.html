@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QwAz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div id="main_div" class="horizontal">
+        <div class="card">
+            <div>
+                <div class="title_header">
+                    <div>
+                        <h1 class="title">QwAz</h1>
+                        <p class="description">Online Qwertz/Azerty converter</p>
+                    </div>
+                    <div>
+                        <button id="github_btn" class="github-btn"
+                            onclick="window.open('https://github.com/STY1001/QwAz');">
+                            <span class="material-icons">code</span>
+                        </button>
+                        <button id="theme_btn" title="Theme: System" class="theme-toggle"
+                            onclick="toggleThemeOption();">
+                            <span id="theme_icon" class="material-icons">settings_suggest</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div id="main_container" class="horizontal">
+                    <textarea id="input" placeholder="Input"></textarea>
+                    <div id="btn_container" class="vertical">
+                        <button onclick="convertQw2Az();" class="noWrap convert_btn">Qw > Az</button>
+                        <button onclick="convertAz2Qw();" class="noWrap convert_btn">Az > Qw</button>
+                    </div>
+                    <textarea id="output" placeholder="Output" readonly></textarea>
+                </div>
+                <div class="separator"></div>
+                <p class="description right-align">&lt;/&gt; by STY1001</p>
+            </div>
+        </div>
+        <div id="warning_card" class="card_warn">
+            <div>
+                <h3 class="title_warn">Warning</h3>
+                <p id="warning_text" class="description_warn">Text</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
